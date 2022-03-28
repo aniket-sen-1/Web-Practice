@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: gainsboro;
+        display: flex;
+        height: 500px;
+        width: 500px;
+        margin: 150px auto;
+      }
+
+      .box {
+        background-color: green;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* animation-name: aniket1; */
+        animation-name: aniket2;
+        animation-duration: 5s;
+        animation-iteration-count: 3;
+        animation-fill-mode: alternate;
+        animation-timing-function: ease-in-out;
+        top: 0px;
+        left: 125px;
+        font-size: 40px;
+        color: red;
+        font-weight: bold;
+        /* animation-delay: 2s; */
+        /* animation-direction: reverse; */
+      }
+
+      @keyframes aniket2 {
+        0% {
+          top: 0px;
+          left: 125px;
+          /* font-size: 25px; */
+        }
+        20% {
+          background-color: yellow;
+          top: 125px;
+          left: 0px;
+          font-size: 50px;
+          color: green;
+        }
+        40% {
+          background-color: orange;
+          top: 250px;
+          left: 125px;
+          font-size: 50px;
+          color: yellow;
+        }
+        80% {
+          background-color: red;
+          top: 125px;
+          left: 250px;
+          font-size: 50px;
+          color: orange;
+        }
+        100% {
+          top: 0px;
+          left: 125px;
+        }
+      }
+      @keyframes aniket1 {
+        from {
+          width: 100px;
+        }
+        to {
+          width: 600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="name">THE BOX</div>
+      </div>
+    </div>
+  </body>
+</html>

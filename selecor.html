@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <style>
+      /* Or Selector */
+      /* b,
+      p {
+        color: red;
+      } */
+      /* And Selector (most use for elements with Specific class)*/
+      /* p.textClass {
+        color: rebeccapurple;
+      } */
+      /* Descendant Selector */
+      /* article ol {
+        color: rgb(160, 160, 84);
+      } */
+
+      /* Direct Child Selector  */
+      /* article > ol {
+        color: aquamarine;
+      } */
+
+      /* General Sibling selector */
+
+      /* li.purple ~ li {
+        color: purple;
+      } */
+
+      /* div.papa ~ ol {
+        color: red;
+      } */
+
+      /* article > ol:nth-child(2) ~ ol {
+        color: rgb(224, 135, 135);
+      } */
+
+      /* Adjacent Sibling */
+
+      /* li.purple + li {
+        color: brown;
+      } */
+
+      /* article > ol:nth-child(2) + ol {
+        color: rebeccapurple;
+      } */
+
+      /* Pseudo Class State */
+      /* li:hover {
+        background-color: red;
+        color: white;
+      } */
+
+      /* Focus Selector */
+      /* input:focus {
+        background-color: red;
+      } */
+
+      /* Required Selector [write required in input tag] */
+      /* input:required{
+        background-color: red;
+      } */
+
+      /* Checked Selector */
+      /* input:checked{
+         margin: 50px;
+      } */
+
+      /* Disabled Selector [ write disabled in input tag] */
+      /* input:disabled{
+        margin: 50px;
+      } */
+
+      /* Only Child Selector */
+      /* b:only-child {
+        background-color: red;
+      } */
+
+      /* Only Child Selector */
+      /* b:only-child{
+        color: red;
+      } */
+      /* First Of Type Selector */
+      /* b:first-of-type {
+        color: red;
+      } */
+
+      /* Nth Of Type Selector */
+      /* li:nth-of-type(2n){
+      color: red;
+      } */
+
+      /* Only Of Type Selector */
+      /* span:only-of-type {
+        color: red;
+      } */
+
+      /* Not Selector */
+      /* ol:not(.child) {
+        color: red;
+      } */
+
+      /* Has Attribute */
+      /* [demoattr] {
+        color: red;
+      } */
+
+      /* Exact Attribute */
+      /* [demoattr="demovalue1.jpg"] {
+        color: red;
+      } */
+
+      /* Begins With Attribute */
+      /* [demoattr^="demov"] {
+        color: red;
+      } */
+
+      /* Ends With Attribute */
+      /* [demoattr$=".jpg"] {
+        color: red;
+      } */
+
+      /* Substring Attribute */
+      /* [demoattr*="ovalue1"] {
+        color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <input type="checkbox" /> -->
+    <article>
+      <!-- 1st child of article -->
+      <div class="papa purple">
+        <ol type="1" class="child">
+          <li class="purple">ol inside div</li>
+          <li>The closing tag</li>
+          <li>The actual element</li>
+        </ol>
+
+        <ol type="1" class="child">
+          <li>ol inside div</li>
+          <li>The closing tag</li>
+          <li>The actual element</li>
+        </ol>
+
+        <ol type="1" class="child">
+          <li>ol inside div</li>
+          <li>The closing tag</li>
+          <li>The actual element</li>
+        </ol>
+      </div>
+      <!-- 2nd child of article -->
+      <ol type="1">
+        <li>ol 2nd child inside article</li>
+        <li>The closing tag</li>
+        <li>The actual element</li>
+      </ol>
+      <!-- 3rd child of article -->
+      <ol type="1">
+        <li>ol 3rd child inside inside article</li>
+        <li>The closing tag</li>
+        <li>The actual element</li>
+      </ol>
+      <!-- 4th child of article -->
+      <ol type="a">
+        <li>ol 4th child inside inside article</li>
+        <li>The closing tag</li>
+        <li>The actual element</li>
+      </ol>
+      <!-- 5th child of article -->
+      <div demoattr="demovalue1.jpg">
+        <span>
+          <b class="textClass">nested text inside div-span</b>
+        </span>
+      </div>
+      <!-- 6th child of article -->
+      <div>
+        <span>
+          <p nested class="textClass">nested text inside div span</p>
+          <b class="textClass">nested text inside div-span</b>
+        </span>
+      </div>
+    </article>
+  </body>
+</html>
