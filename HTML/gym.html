@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aniket-Gym</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Baloo Bhaijaan 2', cursive;
+        margin: 0px;
+        padding: 0px;
+        background: url("image/gym.jpg"); 
+        background-repeat: no-repeat;
+        /* position: relative; */
+      }
+
+      header{
+        background-color: rgba(250, 223, 148, 0.082);
+      }
+    
+      .left {
+        display: inline-block;
+        position: absolute;
+        /* border: 1px solid red; */
+        top: 25px;
+        left: 50px;
+        font-size: 18px;
+        line-height: 14px;
+      }
+
+      .left img {
+        display: block;
+        height: 55px;
+        width: 55px;
+        margin: auto;
+        margin-bottom: 10px;
+      }
+      .mid {
+        /* display: block; */
+        /* border: 1px solid red; */
+        padding-top: 27px;
+        padding-bottom: 25px;
+        /* margin: 25px auto; */
+        margin:auto;
+        width: 45%;
+      }
+
+      nav {
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .header-nav a {
+        color: aliceblue;
+        padding-left: 20px;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      a:hover{
+        color: rgb(175, 167, 167);
+      }
+
+      .right {
+        display: inline-block;
+        position: absolute;
+        /* border: 1px solid red; */
+        top: 25px;
+        right: 50px;
+      }
+      .right button{
+        font-family: 'Baloo Bhaijaan 2', cursive;
+        margin-top: 7px;
+        margin-right: 10px;
+        padding: 4px 14px;
+        background-color: black;
+        color: white;
+        border: gray 2px solid;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 17px;
+      }
+      .right button:hover, .submit:hover{
+        background-color: rgb(94, 91, 91);
+      }
+
+      .container{
+        border: 2px rgb(247, 247, 247) solid;
+        border-radius: 2px;
+        margin-top: 90px;
+        margin-left: 60px;
+        width: 33%;
+        box-shadow: rgb(250, 223, 148) 10px 10px 25px 0.4px;
+        background-color: rgba(250, 223, 148, 0.082);
+      }
+
+      .container h1{
+        color: aliceblue;
+        text-align: center;
+        
+      }
+
+      .form-group input{
+      font-family: 'Baloo Bhaijaan 2', cursive;
+       text-align: center;
+       display: block;
+       width: 75%;
+       margin: 10px auto;
+       font-size: 20px;
+      }
+       .form-group label{
+      font-family: 'Baloo Bhaijaan 2', cursive;
+       text-align: center;
+       display: block;
+       width: 75%;
+       margin: 10px auto;
+       font-size: 20px;
+      }
+      .gender{
+        color: white;
+        display: block;
+        width: 27%;
+        margin: 10px auto;
+      }
+      
+      .male, .female{
+        display: inline-block;
+        padding-right: 10px;
+      }
+
+
+      .container button{
+        display: block;
+        margin: 20px auto;
+        width: 75%;
+        font-family: 'Baloo Bhaijaan 2', cursive;
+        padding: 4px 14px;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        border: rgb(255, 255, 255) 2px solid;
+        cursor: pointer;
+        font-size: 17px;
+}
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <!-- ************ Left ************ -->
+      <div class="left">
+        <img src="image/gym-logo.png" />
+        <!-- <div>Aniket Gym</div> -->
+      </div>
+
+      <!-- ************ Mid ************ -->
+      <div class="mid">
+        <nav class="header-nav">
+          <a href="#" class="active">Home</a>
+            <a href="#">Workout Plans</a>
+            <a href="#">Fitness Calculator</a>
+            <a href="#">About Us</a>
+            <a href="#">Contack Us</a>
+          </li>
+        </nav>
+      </div>
+      <!-- ************ right ************ -->
+      <div class="right"><button>Contact Us</button><button>Email Us</button></div>
+    </header>
+
+    <div class="container">
+      <h1> Best Gym in Ahmedabad</h1>
+      <form action="demo.php">
+        <div class="form-group">
+          <input type="text" name="Name" id="name" placeholder="Enter Your Name">
+        </div>
+        <div class="form-group">
+          <input type="number" name="Age" id="age" placeholder="Enter Your Age">
+        </div>
+        <div class="form-group">
+          <input type="text" name="Locality" id="Locality" placeholder="Enter Your Locality">
+        </div>  
+        <div class="form-group">
+          <input type="number" name="Number" id="phone" placeholder="Enter Your Phone Number">
+        </div>  
+
+        <div class="form-group ">
+          <div class="gender">
+
+            <div class="male">
+              <label for="Male">Male</label>
+                <input type="radio" name="Gender" id="male">
+            </div>
+
+            <div class="female">
+              <label for="Female">Female</label>
+                <input type="radio" name="Gender" id="female">
+           </div>
+
+          </div>
+        </div>
+        <button class="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

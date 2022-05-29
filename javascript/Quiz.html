@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz of array</title>
+  </head>
+  <body style="background-color: black; color: white">
+    hi
+    <script>
+      function ArraySize(string1 = "sen", string2 = "sen") {
+        if (string1.length > string2.length)
+          return `"${string1.toLocaleUpperCase()}" is Longer name.`;
+        if (string2.length > string1.length)
+          return `"${string2.toLocaleUpperCase()}" is Longer name.`;
+        else return "Both names have equal size.";
+      }
+      var name1 = "aniket";
+      var name2 = "siddharth";
+      console.log(`${ArraySize(`sen ${name1}`, `sen ${name2}`)}`);
+      // demo code
+      // console.log("name1 lenght==>  " + `sen ${name1}`.length);
+      // console.log("name2 lenght==>  " + `sen ${name2}`.length);
+      // console.log("..............name1..............");
+      // for (let i = 0; i < name1.length; i++) {
+      //   console.log(i);
+      // }
+      // console.log("/////////////////////////////////////////");
+      // console.log("..............name2..............");
+      // for (let i = 0; i < name2.length; i++) {
+      //   console.log(i);
+      // }
+    </script>
+  </body>
+</html>

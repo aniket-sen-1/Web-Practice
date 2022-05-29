@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript sting</title>
+  </head>
+  <body>
+    <h1>welcome to Javascript String</h1>
+    <div id="container1" class="container"></div>
+    <script>
+      var name = "This_is your string";
+      console.log(name);
+
+      //first occurence of a substring.
+      var position = name.indexOf("is");
+      console.log(position);
+
+      //last occurence of a substring.
+      position = name.lastIndexOf("is");
+      console.log(position);
+
+      //substring form string
+
+      var message = name.slice(0, 7);
+      console.log(message);
+
+      message = name.substring(1, 5);
+      console.log(message);
+
+      // this includes last number
+      message = name.substr(1, 5);
+      console.log(message);
+
+      var replaced = name.replace("string", "aniket");
+      console.log(replaced);
+
+      console.log(name.toUpperCase());
+      console.log(name.toLowerCase());
+
+      var newstring = name.concat("aniket");
+      console.log(newstring);
+
+      var startwithsapces = "    hi there are so many       spaces around";
+      console.log(startwithsapces.trim());
+
+      var findchar = name.charAt(2);
+      console.log(findchar);
+      console.log(name[2]);
+    </script>
+  </body>
+</html>

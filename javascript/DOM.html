@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM in javascript</title>
+    <style>
+      [class*="in"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main" class="container">
+      <ul id="nav">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Our work</li>
+        <li>Contact Us</li>
+        <li>Help</li>
+      </ul>
+    </div>
+    <div class="container">Another Container</div>
+    <script>
+      let main = document.getElementById("main");
+      console.log(main);
+
+      let menu = document.getElementById("nav");
+      console.log(menu);
+
+      let container = document.getElementsByClassName("container");
+      console.log(container);
+      // console.log("----");
+      // console.log(container[0]);
+      // console.log("----");
+      let sel = document.querySelector("#nav>li");
+      console.log("selectors returns", sel);
+
+      let sels = document.querySelectorAll("#nav>li");
+      console.log("selectors returns", sels);
+      sels[0].innerHTML = "My Home";
+      sels[3].innerHTML = "---Hello----";
+    </script>
+  </body>
+</html>

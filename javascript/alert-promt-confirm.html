@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert_Promt_Confirm</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <script>
+      //Alert function does not return anything
+      alert("Eat Sleep Code Repeat");
+
+      //Promt will return input value.
+      //placeholder valu e should not be empty... put empty string==> "" at the place of Guest.
+      let name;
+      name = prompt("Enter your name", "Guest").trim();
+      console.log("Entered name is " + name);
+
+      //confirm in js.... is function will return true or false
+      let deletepost;
+      deletepost = confirm("Do you realy want to delete this post.");
+      if (deletepost) {
+        console.log("your post deleted successfully.");
+      } else {
+        console.log("Your post has not been deleted.");
+      }
+    </script>
+  </body>
+</html>

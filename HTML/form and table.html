@@ -5,129 +5,142 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>form and table</title>
-    <style></style>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      input {
+        width: 100%;
+      }
+      .container {
+        width: 25%;
+      }
+    </style>
   </head>
   <body>
-    <!-- ---------------Form--------------- -->
-    <h3>Enter Your Details</h3>
+    <div class="container">
+      <!-- ---------------Form--------------- -->
+      <h3>Enter Your Details</h3>
 
-    <form>
-      <label for="myName">Name</label>
-      <div>
-        <input type="text" name="myName" id="myName" />
-      </div>
-      <br />
-      <label fo r="myRole">Role:</label>
-      <div>
-        <input type="text" name="myRole" id="myRole" />
-      </div>
-      <br />
-      <label for="myDate">Date:</label>
-      <div>
-        <input type="date" name="myDate" id="myDate" />
-      </div>
-      <br />
-      <label for="myNumber">Bonus:</label>
-      <div>
-        <input type="number" name="myNumber" id="myNumber" />
-      </div>
-      <br />
-      <label for="myEligible">Are you eligible?</label>
-      <div>
-        <input type="checkbox" name="myEligible" id="myEligible" checked />
-      </div>
-      <br />
-      <label for="gender">Gender:</label>
-      <div style="margin-left: 0px">
+      <form>
+        <label for="myName">Name</label>
         <div>
-          <label for="male">Male:</label>
+          <input type="text" name="myName" id="myName" />
+        </div>
+        <br />
+        <label fo r="myRole">Role:</label>
+        <div>
+          <input type="text" name="myRole" id="myRole" />
+        </div>
+        <br />
+        <label for="myDate">Date:</label>
+        <div>
+          <input type="date" name="myDate" id="myDate" />
+        </div>
+        <br />
+        <label for="myNumber">Bonus:</label>
+        <div>
+          <input type="number" name="myNumber" id="myNumber" />
+        </div>
+        <br />
+        <label for="myEligible">Are you eligible?</label>
+        <div>
+          <input type="checkbox" name="myEligible" id="myEligible" checked />
+        </div>
+        <br />
+        <label for="gender">Gender:</label>
+        <div style="margin-left: 0px">
           <div>
-            <input type="radio" name="gender" id="male" value="male" />
+            <label for="male">Male:</label>
+            <div>
+              <input type="radio" name="gender" id="male" value="male" />
+            </div>
+          </div>
+          <div>
+            <label for="female">female:</label>
+            <div>
+              <input type="radio" name="gender" id="female" value="female" />
+            </div>
+          </div>
+          <div>
+            <label for="others">Others:</label>
+            <input type="radio" name="gender" id="others" value="others" />
           </div>
         </div>
-        <div>
-          <label for="female">female:</label>
-          <div>
-            <input type="radio" name="gender" id="female" value="female" />
-          </div>
-        </div>
-        <div>
-          <label for="others">Others:</label>
-          <input type="radio" name="gender" id="others" value="others" />
-        </div>
-      </div>
 
-      <br />
-      <label for="myEmail">My Email:</label>
-      <div>
-        <input type="email" name="myEmail" id="myEmail" />
-      </div>
-      <br />
-      <label for="myText">Message:</label>
-      <div>
-        <textarea name="myText" cols="40" rows="8" id="myText">
+        <br />
+        <label for="myEmail">My Email:</label>
+        <div>
+          <input type="email" name="myEmail" id="myEmail" />
+        </div>
+        <br />
+        <label for="myText">Message:</label>
+        <div>
+          <textarea name="myText" cols="40" rows="8" id="myText">
  default text</textarea
-        >
-      </div>
-      <br />
-      <label for="car">Select your car:</label>
-      <div>
-        <select name="myCar" id="car">
-          <option value="nexon">TATA Nexon</option>
-          <option value="safari">Safari</option>
-          <option value="x1" selected>BMW x1</option>
-        </select>
-      </div>
-      <br />
-      <label for="submit">Submit</label>
-      <div>
-        <input type="submit" name="submit" id="submit" />
-      </div>
-      <br />
-      <label for="reset">Reset</label>
-      <div>
-        <input type="reset" name="reset" id="reset" />
-      </div>
-      <br />
-    </form>
+          >
+        </div>
+        <br />
+        <label for="car">Select your car:</label>
+        <div>
+          <select name="myCar">
+            <option value="nexon" id="nexon">TATA Nexon</option>
+            <option value="safari" id="safari">Safari</option>
+            <option value="x1" id="x1" selected>BMW x1</option>
+          </select>
+        </div>
+        <br />
+        <label for="submit">Submit</label>
+        <div>
+          <input type="submit" name="submit" id="submit" />
+        </div>
+        <br />
+        <label for="reset">Reset</label>
+        <div>
+          <input type="reset" name="reset" id="reset" />
+        </div>
+        <br />
+      </form>
 
-    <!-- ----------**** Table ****----------- -->
+      <!-- ----------**** Table ****----------- -->
 
-    <h3>Our Team Details</h3>
+      <h3>Our Team Details</h3>
 
-    <table style="border: 2px solid rgb(80, 243, 255)">
-      <colgroup>
-        <!-- col is tag to add some Attributes in columns - attributes are applyed in orderd way   -->
-        <col style="background-color: yellow" />
-        <col span="2" style="background-color: rgb(0, 153, 255)" />
-      </colgroup>
-      <thead>
-        <tr>
-          <td>Name</td>
-          <td>age</td>
-          <td>work</td>
-        </tr>
-      </thead>
+      <table style="border: 2px solid rgb(80, 243, 255)">
+        <colgroup>
+          <!-- col is tag to add some Attributes in columns - attributes are applyed in orderd way   -->
+          <col style="background-color: yellow" />
+          <col span="2" style="background-color: rgb(0, 153, 255)" />
+        </colgroup>
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>age</td>
+            <td>work</td>
+          </tr>
+        </thead>
 
-      <tbody>
-        <tr>
-          <td>aniket sen</td>
-          <td>21</td>
-          <td>full stack developer</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>aniket sen</td>
+            <td>21</td>
+            <td>full stack developer</td>
+          </tr>
 
-        <tr>
-          <td>siddharth sen</td>
-          <td>25</td>
-          <td>wordpress dev</td>
-        </tr>
-        <tr>
-          <td>aman</td>
-          <td>22</td>
-          <td>html and css</td>
-        </tr>
-      </tbody>
-    </table>
+          <tr>
+            <td>siddharth sen</td>
+            <td>25</td>
+            <td>wordpress dev</td>
+          </tr>
+          <tr>
+            <td>aman</td>
+            <td>22</td>
+            <td>html and css</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>
 <!-- jsdfkljaskfl -->

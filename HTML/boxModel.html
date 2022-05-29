@@ -60,12 +60,13 @@
         transition-delay: 2s; */
         /* ------------------- */
         /* transition: background-color box-shadow 2s ease-in-out 0.2s; */
-        transition: all 1s ease-in-out 0.2s;
+        transition: background-color, box-shadow, font-size 1s,
+          1s ease-in-out 0.2s;
         flex-grow: 0;
         flex-shrink: 1;
       }
 
-      .container:hover {
+      .container:active {
         background-color: rgb(171, 57, 216);
         box-shadow: 0px 0px 20px 20px rgba(164, 212, 235, 0.836);
         color: white;
@@ -76,16 +77,17 @@
         transform: translateY(100px);
         transform: translate(100px, 100px); */
         /* ------ Transform shorthand------; */
-        transform: skew(10deg) scale(1.1) rotate(-10deg) translate(50px, 50px);
+        /* transform: skew(0deg) scale(1) rotate(-10deg) translate(150px, 50px); */
+        font-size: 29px;
       }
 
-      .demo {
+      /* .demo {
         transition: all 1s ease-in-out 0.2s;
       }
 
       .demo:hover {
         transform: scale(1.2);
-      }
+      } */
     </style>
   </head>
   <body>

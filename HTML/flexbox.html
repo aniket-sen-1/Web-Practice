@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        /* height: 150px; */
       }
       .el--4 {
         background-color: goldenrod;
@@ -44,10 +44,17 @@
         /* -------  FLEXBOX ---------*/
         display: flex;
         /* height: 500px; */
-        align-items: center;
+        /* align-items: center; */
         /* align-items: flex-end; */
-        /* align-items: flex-start; */
+        align-items: flex-start;
+        /* default value of align-content is stretch. */
+        /* align-content: stretch; */
+        /* align-content: center; */
+        align-content: flex-end;
+        /* align-content: flex-start; */
+        /* align-content: space-around; */
 
+        flex-wrap: wrap;
         justify-content: center;
         /* justify-content: space-between; */
         /* default */
@@ -67,7 +74,7 @@
         */
 
         width: 100px;
-        height: 200px;
+        /* height: 200px; */
         background-color: tomato;
         border: 2px solid green;
         margin: 10px;
@@ -79,6 +86,7 @@
         /* flex-grow: 3; */
         /* order: 2; */
         flex: 9 4 100px;
+        height: 200px;
       }
 
       .el--5 {
@@ -98,6 +106,8 @@
       <div class="el el--2">and</div>
       <div class="el el--3">CSS</div>
       <div class="el el--4">are</div>
+      <div class="el el--5">amazing</div>
+      <div class="el el--5">amazing</div>
       <div class="el el--5">amazing</div>
       <!-- <div class="el el--6">languages</div> -->
       <!-- <div class="el el--7">to</div>
