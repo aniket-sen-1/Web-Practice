@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body style="background-color: black">
+    <script>
+      // Delete an Element --------
+      // let a = ["name1", 23, "hi", "hello"];
+      // console.log("*", a);
+      // delete a[1];
+      // console.log(a);
+      // console.log(a[1]);
+
+      // ---- Array Methods  ----
+
+      // sort()  &   reverse()  -----------------
+      // let a = ["rohan", "jk", "bheem", "zaara"];
+      // console.log("*", a);
+      // a.sort();
+      // console.log(a);
+      // a.reverse();
+      // console.log(a);
+
+      // pop() & push()  ---------------
+      // let a = ["rohan", "jk", "bheem", "zaara"];
+      // console.log("*", a);
+      // a.pop();
+      // console.log(a);
+      // a.push("new_name");
+      // console.log(a);
+
+      // shift() & unshift()  ---------------
+      // let a = ["rohan", "jk", "bheem", "zaara"];
+      // console.log("*", a);
+      // a.shift();
+      // console.log(a);
+      // a.unshift("new_name");
+      // console.log(a);
+
+      // return => concate()  ---------------
+      // let a = let a = ["rohan", "jk", "bheem", "arun", "rohit", "bhuvan", "zaara"];
+      // console.log("*", a);
+      // let b = a.concat("name1", "name2");
+      // console.log(b);
+
+      // return => join()  ------------
+      // let a = ["rohan", "jk", "bheem", "arun", "rohit", "bhuvan", "zaara"];
+      // console.log("*", a);
+      // let b = a.join("\n");
+      // console.log(b); // b is an string now.
+
+      // return => a.slice()  --------------- selects elemetns left to right
+      // let a = ["rohan", "jk", "bheem", "arun", "rohit", "bhuvan", "zaara"];
+      // console.log("*", a);
+      // let b = a.slice(2);
+      // console.log(b);
+      // b = a.slice(-3);
+      // console.log(b);
+      // b = a.slice(-3, -1); // right element not selected
+      // console.log(b);
+
+      // a.splice(index, how many no.del, new value)  ---------------
+      // let a = ["rohan", "jk", "bheem", "arun", "rohit", "bhuvan", "zaara"];
+      // console.log("*", a);
+      // a.splice(1, 2, "name2");
+      // console.log(a);
+      // a.splice(-4, 2, "name2");
+      // console.log(a);
+      // a.splice(1, 5);
+      // console.log(a);
+
+      // returns true or false Array.isArray(a) ----------------
+      // let a = ["rohan", "jk", "bheem", "arun", "rohit", "bhuvan", "zaara"];
+      // console.log("*", a);
+      // if (Array.isArray(a)) {
+      //   console.log("yes this is an array");
+      // } else {
+      //   console.log("this is not an array");
+      // }
+
+      //return index=> a.indexOf("search item",start index) ------------
+      //return index=> a.lastIndexOf("search item",start index) ------------
+      // let a = ["rohan", "jk", "bheem", "arun", "rohit", "bhuvan", "zaara"];
+      // console.log("*", a);
+
+      // let index = a.indexOf("arun", 2);
+      // console.log(index);
+
+      // index = a.lastIndexOf("arun", 2);
+      // console.log(index);
+
+      // returns true or false => a.some(function) ----------------(value,index,arr)  returns true (and stops) if the function returns true for one of the array elements.
+      // let a = [8, 9, 4, 1, 15, 25, 2];
+      // console.log("*", a);
+      // let b = a.some(checkAdult);
+      // function checkAdult(x) {
+      //   return x > 18;
+      // }
+      // console.log("adult", b);
+
+      // returns true or false => a.every(function) ----------------(value,index,arr) returns true if the function returns true for all elements.
+      // let a = [58, 19, 24, 61, 35, 25, 49];
+      // console.log("*", a);
+      // let b = a.every(checkAdult);
+      // function checkAdult(x) {
+      //   return x > 18;
+      // }
+      // console.log("adult", b);
+
+      // returns value for true or return undefined for false => a.find(function) ----------------(value,index,arr)
+      // let a = [58, 19, 24, 61, 35, 100, 49];
+      // console.log("*", a);
+      // let b = a.find(checkOld);
+      // function checkOld(x) {
+      //   return x >= 100;
+      // }
+      // console.log("old", b);
+
+      // returns index for true or return -1 for false => a.findIndex(function) ----------------(value,index,arr)
+      // let a = [58, 19, 24, 61, 35, 100, 49];
+      // console.log("*", a);
+      // let b = a.findIndex(checkold);
+      // function checkold(x) {
+      //   return x >= 100;
+      // }
+      // console.log("old at index", b);
+
+      // returns a new array filled with elements that pass a test provided by a function => a.filter(function) ----------------(value,index,arr)
+      // let a = [8, 19, 4, 6, 35, 10, 4];
+      // console.log("*", a);
+      // let b = a.filter(checkold);
+      // function checkold(x) {
+      //   return x >= 18;
+      // }
+      // console.log("Adult", b);
+
+      //print array
+      // console.log("Adult", b.valueOf());
+
+      //return array=> name.toString()
+      // var name = "9834" + ["dfd", 98] + [98] + " 0" + 1000;
+      // var newname = name.toString();
+      // console.log(newname);
+
+      // fill array a.fill(element)
+      // let a = [8, 19, 4, 6, 35, 10, 4];
+      // console.log("*", a);
+      // console.log(a.fill(99));
+
+      // --------------------------------------------------------------
+      // --------------------------------------------------------------
+
+      // a.forEach(function(currentValue, index, arr)) -------
+      // let a = [8, 19, 4, 96, 35, 10, 4];
+      // console.log("*", a);
+      // a.forEach(function (elem, index, arr) {
+      //   if (elem >= 18) {
+      //     console.log("a[" + index + "]=>" + elem + " is greater then 18 ");
+      //   }
+      // });
+    </script>
+  </body>
+</html>
