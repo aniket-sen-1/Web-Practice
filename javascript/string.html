@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript sting</title>
+    <title>Sting</title>
   </head>
-  <body style="background-color: black">
-    <h1>welcome to Javascript String</h1>
-    <div id="container1" class="container"></div>
+  <body style="background-color: black; color: white">
+    <!-- <h1>welcome to Javascript String</h1> -->
+    <!-- <div id="container1" class="container"></div> -->
     <script>
-      var name = "This_is your string";
-      console.log(name);
+      // var name = "This_is your string";
+      // console.log(name);
 
       //first occurence of a substring.
       // var name = "This_is your string";
@@ -23,18 +23,18 @@
       // position = name.lastIndexOf("is");
       // console.log(position);
 
-      //substring form string
-      // var name = "This_is your string";
-      // var message = name.slice(0, 7);
+      // substring form string
+      // var name = "This_is_your string";
+      // var message = name.slice(5, 7); //[x,y)  // can't go to revrse // you can use (-ve) mark
       // console.log(message);
 
-      // var name = "This_is your string";
-      // message = name.substring(1, 5);
+      // var name = "This_is_your string";
+      // message = name.substring(4, 8); //[x,y) // can go to reverse
       // console.log(message);
 
-      // this includes last number
+      // string.substr(start, length)
       // var name = "This_is your string";
-      // message = name.substr(1, 5);
+      // message = name.substr(5, 5);
       // console.log(message);
 
       // var name = "This_is your string";
@@ -52,11 +52,97 @@
       // var startwithsapces = "    hi there are so many       spaces around";
       // console.log(startwithsapces.trim());
 
-      //return array=> name.charat(index)
+      //return => name.charat(index);
       // var name = "This_is your string";
       // var findchar = name.charAt(2);
       // console.log(findchar);
+      // OR
       // console.log(name[2]);
+
+      //return string => name.toUpperCase();
+      // var name = "This_is your string";
+      // var newstr = name.toUpperCase();
+      // console.log(newstr);
+      // // OR
+      // console.log(newstr.toLowerCase());
+
+      //return true false => name.includes("is");
+      // var name = "This_is your string";
+      // var newstr = name.includes("is");
+      // console.log(newstr);
+
+      //return string => name.startsWith();
+      // var name = "This_is your string";
+      // var newstr = name.startsWith("This");
+      // console.log(newstr);
+
+      // var newstr = name.endsWith("string");
+      // console.log(newstr);
+
+      // return index / -1  => name.search(/string/);
+      // var name = "This_is your string";
+      // var index = name.search("your");
+      // Search case insensitive:
+      // index = name.search(/YOUr/i);
+      // console.log(index);
+
+      // return array containing the matches / nul => name.match(/string/);
+      // var name = "This_is your string";
+      // var arr = name.match(/I/g);
+      // // case-insensitive search
+      // // arr = name.match(/I/gi);
+      // console.log(arr);
+      // document.write(arr);
+
+      // // return (index) => name.indexOf("i");
+      // var name = "This_is your string";
+      // var index = name.indexOf("is");
+      // console.log(index);
+
+      // // return (index) => name.lastIndexOf("i");
+      // var name = "This_is your string";
+      // var index = name.lastIndexOf("is");
+      // console.log(index);
+
+      // return string => name.replace(/searchValue/, newValue);
+      // var name = "This_is your string";
+      // var index = name.replace(/your/, "are");
+      // console.log(index);
+      // case-insensitive search & globle search
+      // index = name.replace(/Is/gi, "-Are");
+      // console.log(index);
+
+      // return ascii code => name.charCodeAt();
+      // var name = "This_is your string";
+      // var asciiVale = name.charCodeAt(0);
+      // console.log(asciiVale);
+
+      // return ascii code => String.fromCharCode();
+      // var asciiValue = String.fromCharCode(84);
+      // console.log(asciiValue);
+
+      // return string => name.concat(name2,name3,...);
+      // var name = "This_is your string";
+      // var name2 = "_And";
+      // var index = name.concat(name2, "_ok.");
+      // console.log(index);
+
+      // return arrau => name.split(separator, limit)
+      // var name = "This is your string";
+      // var newarray = name.split(" ");
+      // console.log(newarray);
+      // newarray = name.split(" ", 2);
+      // console.log(newarray);
+
+      // return string => name.join(array);
+      // var name = "This is your string";
+      // var newarray = name.split(" ");
+      // console.log(newarray.join("-")); //
+
+      //return string => name.repeat(count);
+      // var name = "This_is your string";
+      // var newstr = name.repeat(4);
+      // console.log(newstr);
     </script>
   </body>
 </html>

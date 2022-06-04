@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <script>
+      // ----------------------||
+      let make="kwid"
+      var model="tata"
+      let year = 2001;
+      const myCar = new Object();
+      myCar.make = "Ford";
+      myCar.model = "Mustang";
+      myCar.year = 1969;
+      myCar.printName = function(m){
+        console.log(this.make+" "+m);
+      }
+      myCar.printYear = () => {
+        console.log(myCar.year);
+      }
+      // myCar.printName(myCar.model);
+      myCar.printYear();
+
+
+      //      ------OR-------
+      //  object initializer -----
+      // let myCar = new Object();
+      // myCar = {
+      //   make: "Ford",
+      //   model: "Mustang",
+      //   year: 1969,
+      // };
+      // -----------------------||
+      // var student = {
+      //   fname: "rohan",
+      //   lname: "singh",
+      //   email: "rohan@gmail.com",
+      //   age: 25,
+      //   brother: "raju",
+      //   favMovies: ["moonKnight", "Avengers", "Ironman"],
+      //   salary: function (months) {
+      //     return months * 1000000;
+      //   },
+      //   fullname: function () {
+      //     return this.fname + " " + this.lname;
+      //   },
+      //   location: {
+      //     city: "mumbai",
+      //     state: "Maharashtra",
+      //     socity: "rajan",
+      //   },
+      // };
+      // student.house = "rajan";
+      // console.log(student);
+      // console.log(student.age); // property accessors( obj.property )
+      // console.log(student["email"]); // property accessors( obj['property'] )
+      // console.log(student.favMovies[2]);
+      // console.log(student.salary(12));
+      // console.log(student.fullname());
+      // console.log(student.location["city"]);
+
+      // -----------------------------------
+      // Array of Objects
+
+      // var student = [
+      //   { name: "arun", age: 15 },
+      //   { name: "rohan", age: 20 },
+      //   { name: "zara", age: 30 },
+      // ];
+
+      // student.forEach(function (obj, index) {
+      //   document.write(student[index].name + "<br>");
+      // });
+
+      //----------------------------
+      // Const object
+      // const a = {
+      //   name : "Ram",
+      //   age : 25
+      // };
+
+    // a.name = "rohan"; // No error-> updating values
+    // a.age = 55;
+    // a.city = "delhi"; // No error-> addind new property
+    // // a = { city : "mumbai"} // error -> assigning new object to the constant object
+    // // a=[2,3,4]   // error -> assigning array to const object 
+    // console.log(a);
+
+      //----------------------------
+      // For in Loop
+
+      // var student = {
+      //   fname: "rohan",
+      //   lname: "singh",
+      //   email: "rohan@gmail.com",
+      //   age: 25
+      // }
+      
+      // for(const keyname in student){
+      //  document.write(student[keyname]+"<br>")
+      // }
+
+      //----------------------------
+      // return array for function => array.map(function(currentValue, index, arr)
+      // let a = [{name:"sid"},{name:"ram"},{name:"zara"}];
+
+      // let b = a.map(multiply); 
+      // function multiply(element) {
+      //   return element.name.toUpperCase()+"<br>";
+      // }
+      // document.write(b.join(""));
+      // console.log(b.join(""));
+  </script>
+</body>
+</html>
+    </script>
+  </body>
+</html>
