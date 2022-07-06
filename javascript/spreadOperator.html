@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spread Operator</title>
+  </head>
+  <body>
+    <script>
+      // function sum(name, course, ...parameter) {
+      //   // ....parameter is rest operator
+      //   console.log(arguments);
+      //   let sum = 0;
+      //   for (let i of parameter) {
+      //     sum += i;
+      //   }
+      //   console.log("hello", name, "of", course, ":", sum);
+      // }
+      // let arr = [10, 20, 30, 40];
+      // sum("aniket", "BTech", ...arr); // ...arr is spread operator
+
+      //--------------------------------
+
+      // spread operaror in array[]  |-----------------
+
+      // let arr1 = [10, 20, 30, 40];
+      // //let arr2 = arr1; // locating same memory address // not copy
+      // let arr2 = [...arr1]; // spread elements of arr2 and put in [] to make array // copy
+      // arr2.push("aniket");
+      // console.log(arr1);
+      // console.log(arr2);
+
+      // spread operaror in "string"  |-----------------
+      // case-1 //string to array ---
+
+      // let array = [..."aniket"]; // spread operator can spread string into array
+      // console.log(array);
+
+      // Error -> Obj to array //obj is not iterable
+      // let obj = {
+      //   name: "aniket",
+      //   age: 20,
+      // };
+      // console.log([...obj]);
+
+      // case-2 //string to object ---
+
+      // let array = { ..."aniket" }; // spread operator can spread string into object
+      // console.log(array); // index is now key
+
+      // case-3
+      // let newObject = { ...["aniket", "sid"] };
+      // console.log(newObject);
+
+      // concate array withoud arr1.concate(arr2) |--------------------
+
+      // let arr1 = [10, 20, 30, 40];
+      // let arr2 = [50, 60];
+      // let arr3 = ["hello", ...arr1, ...arr2, "hello"];
+      // console.log(arr3);
+
+      // spread operator in objects |--------------------
+
+      //case-1 ---
+
+      // let obj1 = {
+      //   name: "aniket bhai",
+      // };
+      // let obj2 = {
+      //   age: 20,
+      // };
+      // let obj3 = {
+      //   ...obj1,
+      //   ...obj2,
+      // };
+      // console.log(obj3);
+
+      // case-2 ---
+
+      // let obj1 = {
+      //   key1: "value1",
+      //   key2: "value2",
+      // };
+      // let obj2 = {
+      //   key1: "valuUnique",
+      //   key3: "value3",
+      //   key4: "value4",
+      // };
+      // let obj4 = [1, 2, 3];
+      // let obj3 = {
+      //   ...obj1, // key1 of obj1 will be Overwritten by key1 of obj2 // key name shoud be unique
+      //   ...obj2,
+      //   ...obj4,
+      //   key5: "i am new",
+      // };
+      // console.log(obj3);
+    </script>
+  </body>
+</html>

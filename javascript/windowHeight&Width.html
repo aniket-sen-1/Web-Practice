@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript</title>
+  </head>
+  <body onresize="resizeFunction()">
+    <script>
+      function resizeFunction() {
+        console.clear();
+        let iHeight = window.innerHeight;
+        console.log("Inner Height : " + iHeight);
+
+        let oHeight = window.outerHeight;
+        console.log("Outer Height : " + oHeight);
+
+        let iWidth = window.innerWidth;
+        console.log("Inner Width : " + iWidth);
+
+        let oWidth = window.outerWidth;
+        console.log("Outer Width : " + oWidth);
+      }
+    </script>
+  </body>
+</html>

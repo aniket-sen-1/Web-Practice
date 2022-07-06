@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>closures</title>
+  </head>
+  <body>
+    <script>
+      // EXP - 1
+      // function printFullName(firstName, secondName) {
+      //   function printName() {
+      //     console.log(firstName, secondName);
+      //   }
+      //   return printName;
+      // }
+      // const ans = printFullName("aniket", "sen");
+      // ans();
+
+      //EXP - 2
+      // function myFunction(Power) {
+      //   return function (number) {
+      //     return number ** Power;
+      //   };
+      // }
+      // const square = myFunction(2);
+      // console.log(square(2));
+
+      //EXP - 3
+      // myFunction = (power) => (number) => number ** power;
+      // const cube = myFunction(3);
+      // console.log(cube(2));
+
+      // EXP - 4
+
+      // function func() {
+      //   let count = 0;
+      //   return function () {
+      //     if (count == 0) {
+      //       console.log("hello");
+      //       console.log(count)
+      //       ++count;
+      //       // ++a;
+      //     } else {
+      //       console.log("I am already called before");
+      //       // console.log(count)
+      //       // ++a;
+      //       console.log(a,"of else")
+      //     }
+      //   };
+      // }
+
+      // const myFunction = func();
+      // myFunction();
+      // myFunction();
+      // myFunction();
+      //   myFunction();
+
+          // EXP - 5
+
+          function outer(){
+            // var a = 10;
+            function inner(){
+              console.log(a)
+            }
+            let a = 10; // also go to the clouser to the top
+            return inner
+          }
+         let close =  outer()
+         close();
+
+
+    </script>
+  </body>
+</html>

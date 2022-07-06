@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form Events</title>
+  </head>
+  <body>
+    <form action="" id="form">
+      <label for="">Name</label>
+      <input id="firstInput" type="text" required /><br /><br />
+
+      <label for="">Class</label>
+      <input type="text" id="secondInput" /><br /><br />
+
+      <select id="option">
+        <option value="india">India</option>
+        <option value="japan">japan</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Sri Lanka">Sri Lanka</option>
+        <option value="Nepal">Nepal</option>
+      </select>
+      <br />
+      <input type="submit" id="submit" />
+    </form>
+
+    <div id="test" style="border: 1px solid red"></div>
+    <script>
+      //adding events in firstInput
+
+      document
+        .getElementById("firstInput")
+        .addEventListener("focus", focusFunction);
+      document
+        .getElementById("firstInput")
+        .addEventListener("blur", blurFunction);
+      document
+        .getElementById("firstInput")
+        .addEventListener("input", inputFunction); //input is batter then keypress
+
+      //adding events in seconedInput
+
+      document
+        .getElementById("secondInput")
+        .addEventListener("focus", focusFunction);
+      document
+        .getElementById("secondInput")
+        .addEventListener("blur", blurFunction);
+
+      //adding events in option
+
+      document
+        .getElementById("option")
+        .addEventListener("change", inputFunction);
+
+      // adding Submit event in form
+
+      document.getElementById("form").addEventListener("submit", submitForm);
+
+      // adding invalid event in input section
+
+      document
+        .getElementById("firstInput")
+        .addEventListener("invalid", fillTheName);
+
+      // -----------------
+      // -----------------
+
+      // javaScript Focus Event
+      function focusFunction() {
+        this.style.background = "lime";
+      }
+
+      /*  JavaScript Blur Event  */
+      function blurFunction() {
+        this.style.background = "";
+      }
+
+      /*  JavaScript Input Event  */
+      function inputFunction() {
+        var x = this.value; // .value is <input> value of an element given by user
+        document.getElementById("test").innerHTML = x;
+      }
+
+      // JavaScript Submit Event
+      function submitForm() {
+        let name = document.getElementById("firstInput").value;
+        alert("your name is " + name);
+      }
+
+      //javaScript invalid Event
+      function fillTheName() {
+        alert("please fill the first name");
+      }
+    </script>
+  </body>
+</html>

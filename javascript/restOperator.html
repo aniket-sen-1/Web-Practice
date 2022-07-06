@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Operator</title>
+  </head>
+  <body></body>
+  <script>
+    function sum(name, course, ...parameter) {
+      // ...parameter is rest operator
+      // console.log(arguments);
+      let sum = 0;
+      for (let i of parameter) {
+        sum += i;
+      }
+
+      console.log("hello", name, "of", course, ":", sum);
+    }
+
+    sum("aniket", "btech", 90, 82, 79, 84);
+    sum("rahul", "bsc", 81, 92, 73, 84);
+    sum("aniket", "bcom", 75, 87, 89, 78);
+  </script>
+</html>

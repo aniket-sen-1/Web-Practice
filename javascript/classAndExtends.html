@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class and extends</title>
+  </head>
+  <body>
+    <script>
+      // class createUser {
+      //   constructor(firstName, lastName, email, age, address) {
+      //     this.firstName = firstName;
+      //     this.lastName = lastName;
+      //     this.email = email;
+      //     this.age = age;
+      //     this.address = address;
+      //   }
+      //   about() {
+      //     return `${this.firstName} is ${this.age} years old.`;
+      //   }
+      //   is18() {
+      //     return this.age >= 18;
+      //   }
+      //   sing() {
+      //     return "la la la la ";
+      //   }
+      //   marks(num) {
+      //     console.log("marks is=>", num);
+      //   }
+      // }
+      // const user1 = new createUser(
+      //   "harshit",
+      //   "vashsith",
+      //   "harshit@gmail.com",
+      //   18,
+      //   "my address"
+      // );
+      // const user2 = new createUser(
+      //   "harsh",
+      //   "vashsith",
+      //   "harshit@gmail.com",
+      //   15,
+      //   "my address"
+      // );
+      // const user3 = new createUser(
+      //   "mohit",
+      //   "vashsitha",
+      //   "harshit@gmail.com",
+      //   19,
+      //   "my address"
+      // );
+
+      // console.log(user1);
+      // console.log(Object.getPrototypeOf(user1));
+      // user1.marks(95);
+
+      // ---------- === ----------
+      // ---------- EXP ----------
+      // ---------- === ----------
+
+      class animal {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        eat() {
+          return `${this.name} is eating`;
+        }
+        isSuperCute() {
+          return this.age <= 1;
+        }
+
+        isCute() {
+          return true;
+        }
+      }
+
+      class dog extends animal {
+        constructor(name, age, speed) {
+          super(name, age);
+          this.speed = speed;
+        }
+
+        eat() {
+          return `Modified Eat : ${this.name} is eating`;
+        }
+
+        run() {
+          return `${this.name} is running at ${this.speed}kmph`;
+        }
+      }
+
+      const animal1 = new animal("cat", 3);
+      console.log(animal1.eat());
+      const animal2 = new dog("tommy", 5);
+      console.log(animal2.eat());
+    </script>
+  </body>
+</html>

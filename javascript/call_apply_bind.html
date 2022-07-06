@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call,Apply and Bind</title>
+  </head>
+  <body>
+    <script>
+      let name = "aniket";
+      function about(hobby, favMusician) {
+        //hobby, favMusician
+        console.log(this.firstName, this.age, hobby, favMusician);
+      }
+      const user1 = {
+        firstName: "harshit",
+        age: 8,
+      };
+      const user2 = {
+        firstName: "mohit",
+        age: 9,
+        about2: function (hobby, favMusician) {
+          console.log(this.firstName, this.age, hobby, favMusician);
+        },
+      };
+
+      //call
+      // user2.about2.call(user1, "guitar", "bach"); // (object,argumentValue,argumentValue)
+      //OR call function out of object
+      // about.call(user1, "guitar", "bach");
+      // OR apply
+      // about.apply(user1, ["guitar", "bach"]); //(object,["value","value"])
+
+      //bind
+      // const func = about.bind(user1, "guitar", "bach"); //  (object,argumentValue,argumentValue) || returns function
+      // func();
+
+      // you can't do this
+      // const func = user2.about2; // only function of user2 defintion will passed
+      // func();
+
+      //you can
+      const func = user2.about2.bind(user2, "guitar", "bach"); // function of user2 is binded to user2
+      func();
+    </script>
+  </body>
+</html>

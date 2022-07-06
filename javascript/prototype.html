@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prototype</title>
+  </head>
+  <body>
+    <script>
+      // -----prototype-----
+      // function hello() {
+      //   console.log("aniket");
+      // }
+      // hello.prototype.abc = "abc";
+      // hello.prototype.xyx = "xyz";
+      // hello.prototype.sing = function () {
+      //   return "la laa la";
+      // };
+      // console.log(hello.prototype);
+
+      // ---EXP=1-----
+      function createUser(firstName, lastName, email, age, addreess) {
+        const user = Object.create(createUser.prototype);
+        user.firstName = firstName;
+        user.lastName = lastName;
+        user.email = email;
+        user.age = age;
+        user.addreess = addreess;
+        return user;
+      }
+
+      createUser.prototype.about = function () {
+        return `${this.firstName} is ${this.age} years old.`;
+      };
+      createUser.prototype.is18 = function () {
+        return this.age >= 18;
+      };
+      createUser.prototype.sing = function () {
+        return `la laaa aa`;
+      };
+      const user1 = createUser(
+        "aniket",
+        "bhai",
+        "aniketbhai@gmail.com",
+        18,
+        "myAddress"
+      );
+
+      const user2 = createUser(
+        "sid",
+        "kumar",
+        "sidkumar@gmail.com",
+        15,
+        "myAddress"
+      );
+      console.log("=", user1.is18());
+    </script>
+  </body>
+</html>

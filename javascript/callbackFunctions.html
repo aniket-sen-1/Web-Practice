@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Functions</title>
+  </head>
+  <body>
+    <script>
+      //// function calling function
+      // function myFunc2(name) {
+      //   console.log("myFunc2 Called");
+      //   console.log("my name is", name);
+      // }
+      // function myFunc(Call) {
+      //   let name = "aniket";
+      //   console.log("myFunc Called");
+      //   Call(name);
+      // }
+      // myFunc(myFunc2);
+
+      //// function returning function
+
+      function myFunc() {
+        function hello() {
+          return "hello world";
+        }
+        return hello;
+        // OR
+        // return function hello() {
+        //   return "hello world";
+        // };
+      }
+      const ans = myFunc();
+      console.log(ans());
+    </script>
+  </body>
+</html>

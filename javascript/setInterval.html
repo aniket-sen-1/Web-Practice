@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval</title>
+    <style>
+      #button {
+        padding: 1rem 2rem;
+        border: rgb(0, 0, 0) 2px solid;
+        border-radius: 3px;
+        background-color: rgb(255, 252, 252);
+        font-weight: 700px;
+        border-radius: 3px;
+        color: rgb(49, 49, 49);
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all 0.5s;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+      #button:hover {
+        background-color: rgb(237, 237, 237);
+        border: rgb(0, 0, 0) 2px solid;
+        transform: scale(1.05);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button">Stop Changing</button>
+
+    <!-- <script>
+      const body = document.body;
+      const button = document.getElementById("button");
+      const intervalId = setInterval(() => {
+        const red = Math.floor(Math.random() * 126);
+        const green = Math.floor(Math.random() * 126);
+        const blue = Math.floor(Math.random() * 126);
+        const rgb = `rgb(${red},${green},${blue}`;
+        body.style.background = rgb;
+      }, 500);
+      button.addEventListener("click", () => {
+        clearInterval(intervalId);
+        button.textContent = body.style.background;
+        cons;
+      });
+    </script> -->
+  </body>
+</html>

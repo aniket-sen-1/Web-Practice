@@ -25,6 +25,12 @@
       // a.reverse();
       // console.log(a);
 
+      // let numbers = [95, 1, 45, 25, 1000, 12];
+      // let lowToHigh = numbers.slice(0).sort((a, b) => a - b);
+      // let highToLow = numbers.slice(0).sort((a, b) => b - a);
+      // console.log(lowToHigh);
+      // console.log(highToLow);
+
       // pop() & push()  ---------------
       // let a = ["rohan", "jk", "bheem", "zaara"];
       // console.log("*", a);
@@ -54,19 +60,23 @@
       // console.log(b); // b is an string now.
 
       // return => a.slice()  --------------- selects elemetns left to right
-      // let a = ["rohan", "jk", "bheem", "arun", "rohit", "bhuvan", "zaara"];
+      let a = ["rohan", "jk", "bheem", "arun", "rohit", "bhuvan", "zaara"];
       // console.log("*", a);
-      // let b = a.slice(2);
+      // let b = a.slice(2); // mean a.slice(2,end)
       // console.log(b);
       // b = a.slice(-3);
       // console.log(b);
-      // b = a.slice(-3, -1); // right element not selected
-      // console.log(b);
+      b = a.slice(-3, -1); // right element not selected
+      console.log(b);
 
       // a.splice(index, how many no.del, new value)  ---------------
       // let a = ["rohan", "jk", "bheem", "arun", "rohit", "bhuvan", "zaara"];
       // console.log("*", a);
-      // a.splice(1, 2, "name2");
+      // a.splice(1, 2); // delete
+      // console.log(a);
+      // a.splice(1, 0, "name2"); //insert
+      // console.log(a);
+      // a.splice(1, 2, "name2", "name3", "name4"); // delete and insert
       // console.log(a);
       // a.splice(-4, 2, "name2");
       // console.log(a);
@@ -120,6 +130,19 @@
       // }
       // console.log("old", b);
 
+      // --EXP of filter()--
+
+      // const users = [
+      //   { userId: 1, userName: "harshit" },
+      //   { userId: 2, userName: "harsh" },
+      //   { userId: 3, userName: "nitish" },
+      //   { userId: 4, userName: "mohit" },
+      //   { userId: 5, userName: "aaditya" },
+      // ];
+
+      // const myUser = users.find((user) => user.userId === 3);
+      // console.log(myUser);
+
       // returns index for true or return -1 for false => a.findIndex(function) ----------------(value,index,arr)
       // let a = [58, 19, 24, 61, 35, 100, 49];
       // console.log("*", a);
@@ -146,10 +169,10 @@
       // var newname = name.toString();
       // console.log(newname);
 
-      // fill array => a.fill(element)
+      // fill array => a.fill(value,start,end) // [start,end)
       // let a = [8, 19, 4, 6, 35, 10, 4];
       // console.log("*", a);
-      // console.log(a.fill(99));
+      // console.log(a.fill(0, 2, 6)); //mutable // []
 
       // --------------------------------------------------------------
       // --------------------------------------------------------------
@@ -174,6 +197,62 @@
       //   return element * 10;
       // });
       // document.write((b = b.join("  -|-  ")));
+
+      // exp-1 of map()------
+      // const squareNumber = numbers.map((number, index)=>{
+      //     return index;
+      // });
+      // console.log(squareNumber);
+
+      // exp-2 of map()------
+      // const users = [
+      //   { firstName: "harshit", age: 23 },
+      //   { firstName: "mohit", age: 21 },
+      //   { firstName: "nitish", age: 22 },
+      //   { firstName: "garima", age: 20 },
+      // ];
+      // const userNames = users.map((user) => {
+      //   return user.firstName;
+      // });
+      // console.log(userNames);
+
+      // -------------------------------------
+
+      // return number =>array.reduce() ------------
+
+      //--------Exp-1 ----------
+      // const numbers = [1, 2, 3, 4, 5, 10];
+
+      // // aim : sum of all the numbers in array
+
+      // const sum = numbers.reduce((accumulator, currentValue) => {
+      //   return accumulator + currentValue;
+      // }, 100);
+      // console.log(sum);
+      //--------Exp-2 ----------
+      // accumulator , currentValue,  return
+      // 1               2              3
+      // 3               3              6
+      // 6               4              10
+      // 10              5              15
+      // 15              10             25
+
+      // const userCart = [
+      //   { productId: 1, productName: "mobile", price: 12000 },
+      //   { productId: 2, productName: "laptop", price: 22000 },
+      //   { productId: 3, productName: "tv", price: 15000 },
+      // ];
+
+      // const totalAmount = userCart.reduce((totalPrice, currentProduct) => {
+      //   return totalPrice + currentProduct.price;
+      // }, 0);
+
+      // console.log(totalAmount);
+
+      // total price      currentValue     return
+      // 0                {}                  12000
+      // 12000            22000                34000
+      // 34000            15000                49000
     </script>
   </body>
 </html>

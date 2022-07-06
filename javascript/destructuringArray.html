@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Array</title>
+  </head>
+  <body>
+    <script>
+      // let user = ["aniketSen", 22, "delhi", ["male", 2]];
+      // let [name, age, city, [gender, experience]] = user;
+      // console.log(name);
+      // console.log(age);
+      // console.log(city);
+      // console.log(gender);
+      // console.log(experience);
+
+      //// using rest operator ------------------------------
+
+      // let user = ["aniketSen", 22, "delhi", ["male", 2]];
+      // let [name, ...args] = user;
+      // console.log(name);
+      // console.log(args);
+
+      //// using function parameter ------------------------------
+
+      // function user([name, age, city, [gender, experience]]) {
+      //   console.log(name);
+      //   console.log(age);
+      //   console.log(city);
+      //   console.log(gender);
+      //   console.log(experience);
+      // }
+      // user(["aniketSen", 22, "delhi", ["male", 2]]);
+
+      //// using function argument ------------------------------
+
+      // function user() {
+      //   return ["aniketSen", 22, "delhi", ["male", 2]];
+      // }
+      // let [name, age, city, [gender, experience]] = user();
+      // console.log(name);
+      // console.log(age);
+      // console.log(city);
+      // console.log(gender);
+      // console.log(experience);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Navigation</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>orange</li>
+      <li>Apple</li>
+      <li>Grapes</li>
+      <li>Banana</li>
+    </ul>
+    <ul id="list2" class="wow">
+      <li>Carrot</li>
+      <li>orange</li>
+    </ul>
+    <div id="list3"></div>
+    <script>
+      // //replaceChild()  & removeChild()
+      // let newElement = document.createElement("li");
+      // let newText = document.createTextNode("hay i am here");
+      // newElement.appendChild(newText);
+      // let target = document.getElementById("list");
+      // let oldText = target.children[0];
+      // // target.replaceChild(newElement, oldText); // replace
+      // target.removeChild(oldText); // remove
+
+      // //cloneNode
+      // let target = document.getElementById("list").children[0];
+      // let copyElement = target.cloneNode("true");
+      // console.log(copyElement);
+      // document.getElementById("list2").appendChild(copyElement);
+
+      // //haseAttribute();
+      // let target = document.getElementById("list2");
+      // let find = target.hasAttribute("class"); //true
+      // console.log(find);
+
+      // //haseChildNodes();
+      // let target = document.getElementById("list3"); //false
+      // let find = target.hasChildNodes();
+      // console.log(find);
+
+      // // isEqualNode();
+      let target1 = document.getElementById("list").firstElementChild;
+      let target2 = document.getElementById("list2").children[1];
+      let equal = target1.isEqualNode(target2);
+      console.log(equal);
+    </script>
+  </body>
+</html>

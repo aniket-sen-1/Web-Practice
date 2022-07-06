@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript settimeout</title>
+    <style>
+      #test {
+        width: 150px;
+        height: 100px;
+        background: red;
+      }
+      #submit {
+        transition: all 0.4s;
+        /* background-color: gray; */
+        margin: 10px 15px;
+        padding: 5px 10px;
+      }
+      #submit:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    loading
+    <div id="test"></div>
+    <input type="submit" id="submit" onclick="stopAnimation()" />
+    <div id="message"></div>
+    <script>
+      // setInterval() & clearInterval()
+
+      let called = 0;
+      function Animation() {
+        let a = 0;
+        let id = setInterval(anim, 200);
+        function anim() {
+          ++called;
+          a += 10;
+          if (a == 400) {
+            clearInterval(id);
+          } else {
+            let target = document.getElementById("test");
+            target.style.width = a + "px";
+          }
+        }
+      }
+
+      //setTimeout() & clearTimeout()
+      let id2 = setTimeout(() => {
+        Animation();
+      }, 2000);
+      for (let i = 0; i < 100; i++) {
+        console.log(".");
+      }
+
+      function stopAnimation() {
+        // berfor excuting settimeout
+        if (called == 0) {
+          clearTimeout(id2);
+          document.getElementById("message").innerHTML = "Stopped";
+        } else {
+          document.getElementById("message").innerHTML = "can't Stop";
+        }
+      }
+    </script>
+  </body>
+</html>

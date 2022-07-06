@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      const user1 = {
+        firstName: "aniket",
+        age: 8,
+        about: () => {
+          console.log(this);
+          console.log(`my name is ${this.firstName}`);
+        },
+      };
+
+      function hello() {
+        function hello2() {
+          user1.about();
+        }
+        hello2();
+      }
+      let firstName = "aniket";
+      hello();
+    </script>
+  </body>
+</html>

@@ -9,31 +9,51 @@
   <body style="background-color: black; color: white">
     <script>
       // ----------------------||
-      let make="kwid"
-      var model="tata"
-      let year = 2001;
-      const myCar = new Object();
-      myCar.make = "Ford";
-      myCar.model = "Mustang";
-      myCar.year = 1969;
-      myCar.printName = function(m){
-        console.log(this.make+" "+m);
-      }
-      myCar.printYear = () => {
-        console.log(myCar.year);
-      }
+      // let make="kwid"
+      // var model="tata"
+      // let year = 2001;
+      // const myCar = new Object();
+      // let key = "color"; // adding key using variable
+      // myCar[key] = "green"; // value of key is color
+      // myCar.make = "Ford";
+      // myCar.model = "Mustang";
+      // myCar.year = 1969;
+      // myCar.printName = function(m){
+      //   console.log(this.make+" "+m); // if only make then value of make is kwid(look out of the object)
+      // }
+      // myCar.printYear= function(){  // so printYear is called by myCar thats why printYear function know the meaning of .this is myCar
+      //   let aniket = () => {       // arrow function will take the meaning of .this from right out from its lexical scop and save 
+      //      console.log(this.year);
+
+      //   }
+      //   // let aniket = function() {  // this function is not called by or bind with any object so this function is not know the meaning of .this
+      //   //    console.log(this.year);
+      //   // }
+      //   aniket.call(this)
+     
+      // }
       // myCar.printName(myCar.model);
-      myCar.printYear();
+      // myCar.printYear();
+
+      fu
+      let aniket = () =>{
+        console.log(this)
+      }
+      aniket()
 
 
       //      ------OR-------
       //  object initializer -----
-      // let myCar = new Object();
-      // myCar = {
-      //   make: "Ford",
-      //   model: "Mustang",
-      //   year: 1969,
+      // let make = "name"
+      // let makeValue = "ford"
+      // let color = "glossy"
+      // let colorValue = "green"
+      // const myCar = {
+      //   [make]: makeValue,
+      //   [color]:colorValue
       // };
+      // console.log(myCar) // bmw
+
       // -----------------------||
       // var student = {
       //   fname: "rohan",
@@ -57,7 +77,7 @@
       // student.house = "rajan";
       // console.log(student);
       // console.log(student.age); // property accessors( obj.property )
-      // console.log(student["email"]); // property accessors( obj['property'] )
+      // console.log(student["email"]); // property accessors( obj['property'] ) // you can put variable
       // console.log(student.favMovies[2]);
       // console.log(student.salary(12));
       // console.log(student.fullname());
@@ -74,6 +94,8 @@
 
       // student.forEach(function (obj, index) {
       //   document.write(student[index].name + "<br>");
+      //   //or
+      //   document.write(obj.name+ "<br>");
       // });
 
       //----------------------------
@@ -105,15 +127,26 @@
       // }
 
       //----------------------------
+
       // return array for function => array.map(function(currentValue, index, arr)
       // let a = [{name:"sid"},{name:"ram"},{name:"zara"}];
-
       // let b = a.map(multiply); 
       // function multiply(element) {
       //   return element.name.toUpperCase()+"<br>";
       // }
       // document.write(b.join(""));
       // console.log(b.join(""));
+
+      // // Object.keys(obj) --- this will return array of keys
+      // var student = {
+      //   fname: "rohan",
+      //   lname: "singh",
+      //   email: "rohan@gmail.com",
+      //   age: 25
+      // }
+      // console.log(Object.keys(student)); // ["fname", "lname", "email", "age"]
+
+
   </script>
 </body>
 </html>

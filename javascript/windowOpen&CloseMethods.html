@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <button onclick="openWindow()">Open Window</button>
+    <button onclick="closeWindow()">Close Window</button>
+    <script>
+      /* JavaScript Open Close Window Method */
+      var myWinow;
+      function openWindow() {
+        myWinow = window.open(
+          "http://www.yahoobaba.net",
+          "_blank",
+          "width=500px,height=200px,left=500px,top=200px"
+        );
+      }
+      function closeWindow() {
+        myWinow.close();
+      }
+    </script>
+  </body>
+</html>

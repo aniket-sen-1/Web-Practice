@@ -9,38 +9,269 @@
       [class*="in"] {
         color: red;
       }
+      .container {
+        background-color: rgb(167, 167, 167);
+      }
+      .nav li {
+        color: green;
+      }
+
+      .hello {
+        background-color: orange;
+      }
+      .bhai {
+        border: red 5px solid;
+      }
     </style>
   </head>
-  <body>
-    <div id="main" class="container">
-      <ul id="nav">
-        <li>Home</li>
+  <body style="background-color: rgba(0, 0, 0, 0.63)">
+    <div
+      id="main"
+      class="container container2 container3"
+      style="margin: auto; width: 50%"
+    >
+      <ul id="nav" class="nav" style="margin: auto; width: 50%">
+        <li><h1>Home</h1></li>
         <li>About Us</li>
         <li>Our work</li>
         <li>Contact Us</li>
         <li>Help</li>
       </ul>
     </div>
+    <div class="container">
+      <ul id="nav2" class="nav">
+        <li>name</li>
+        <li><h1 class="hi meow">info</h1></li>
+        <li>house</li>
+        <li>call phone</li>
+        <li>Contact</li>
+      </ul>
+    </div>
     <div class="container">Another Container</div>
     <script>
-      let main = document.getElementById("main");
-      console.log(main);
+      // let main = document.all[9];
+      // let main = document.all;
+      // let main = document.getElementsByClassName("container");
+      // console.log(main);
+      // main.innerHTML = "hello";
+      // main.class = hello;
+      // console.log(main);
 
-      let menu = document.getElementById("nav");
-      console.log(menu);
+      // let main = document.getElementsByTagName("ul")[1];
+      // console.log(main);
 
-      let container = document.getElementsByClassName("container");
-      console.log(container);
+      // let menu = document.getElementById("nav");
+      // console.log(menu);
+
+      // let container = document.getElementsByClassName("container");
+      // console.log(container);
       // console.log("----");
       // console.log(container[0]);
       // console.log("----");
-      let sel = document.querySelector("#nav>li");
-      console.log("selectors returns", sel);
+      // let sel = document.querySelector(".nav li");
+      // console.log("selectors returns", sel);
 
-      let sels = document.querySelectorAll("#nav>li");
-      console.log("selectors returns", sels);
-      sels[0].innerHTML = "My Home";
-      sels[3].innerHTML = "---Hello----";
+      // let sels = document.querySelectorAll(".nav>li");
+      // console.log("selectors returns", sels);
+      // sels[0].innerHTML = "My Home";
+      // sels[3].innerHTML = "---Hello----";
+
+      // getAttribute("")-------
+      // let element = document.getElementById("main").getAttribute("class");
+      // console.log(element);
+
+      // let element = document.getElementById("main").getAttribute("style");
+      // element.getAttribute = console.log(element);
+
+      //attributes-------
+      // let element = document.getElementById("main").attributes;
+      // console.log(element);
+      // console.log(element[0].value); //OR document.getElementById("main").attributes[0].value
+
+      // attributes[]-----
+      // let element = document.getElementById("main").attributes[1];
+      // console.log(element);
+
+      // let main = document.getElementsByTagName("ul")[1];
+      // console.log(main);
+
+      // DOM set Methods  =========||=========
+
+      // let element = document.getElementById("main");
+      // element.innerHTML = "hi";
+      // console.log(element);
+
+      // OR
+
+      // document.getElementById("main").innerHTML = "<h1> WOW </h2>";
+      // let element = document.getElementById("main").innerHTML;
+      // console.log(element);
+
+      // document.getElementById("main").innerText = "<h1>WOW</h1>";
+      // let element = document.getElementById("main").innerHTML;
+      // console.log(element);
+
+      // document.getElementById("main").setAttribute("class", "hello"); // hello class created befor this in style sheet
+      // let element = document.getElementById("main");
+      // console.log(element);
+
+      // document
+      //   .getElementById("nav2")
+      //   .setAttribute("style", "border:10px dotted orange;"); // hello class created befor this in style sheet
+      // let element = document.getElementById("main");
+      // console.log(element);
+
+      // let element = (document.getElementById("nav2").attributes[1].value =
+      //   "hello");
+      // console.log(document.getElementById("nav2"));
+      // console.log(element);
+      // element = document.getElementById("nav2");
+      // element.removeAttribute("class");
+      // console.log(element.attributes);
+
+      // let element = document.querySelectorAll("ul h1");
+      // console.log(element);
+      // element[0].setAttribute("class", "hello");
+      // // OR
+      // document.querySelectorAll("ul h1")[1].innerHTML = "YAHOO";
+      // document.querySelectorAll("ul h1")[1].setAttribute("style", "color:red");
+      // console.log(element[0].getAttributeNode("class")); // refresh the page
+
+      // DOM CSS styling methods
+
+      // style method
+
+      // let element = document.getElementById("main");
+      // document.getElementById("main").style.border = "Purple solid 15px";
+      // console.log(element.getAttributeNode("style"));
+
+      //className method
+
+      // let element = document.getElementById("main").className;
+      // console.log(element);
+
+      //classList method==> .add("") and .remove("") and .length
+
+      // let element = document.getElementById("main");
+      // element.addEventListener("mouseenter", addClass);
+      // function addClass() {
+      //   element.classList.add("hello", "bhai");
+      //   console.log("mouseenter class names=> " + element.className);
+      //   console.log("mouseenter class length=> " + element.classList.length);
+
+      // console.log("all class name with index=> " + element.classList[1]); //same
+      // console.log("all class name with index=> " + element.classList.item(1));//same
+      // }
+      // element.addEventListener("mouseout", removeClass);
+      // function removeClass() {
+      //   element.classList.remove("hello", "bhai");
+      //   console.log("mouseout class name=> " + this.className);
+      //   console.log("mouseenter class length=> " + this.classList.length);
+      // }
+
+      // element.addEventListener("click", addAndRemoveClass);
+      // function addAndRemoveClass() {
+      //   this.classList.toggle("hello");
+      //   console.log("mouseout class name=> " + this.className);
+      //   console.log("mouseenter class length=> " + this.classList.length);
+      // }
+      // // .contain()
+
+      // let present = element.classList.contains("adfsadfsfClass"); //returns false
+      // console.log(present);
+      // array in class list
+      // let element = document.getElementById("main").classList;
+      // element.add("hello");
+      // console.log(element[1]);
+
+      // Basic Events
+
+      // onclick ==> mouse click
+      // document.getElementById("main").onclick = changeColor;
+      // function changeColor() {
+      //   document.getElementById("main").style.backgroundColor = "purple";
+      // }
+
+      // // ondblclick ==> mouse double click
+      // document.getElementById("main").ondblclick = changeColor = () => {
+      //   document.getElementById("main").style.backgroundColor = "purple";
+      // };
+
+      // // onecontextmenu ==> mouse right clic
+      // document.getElementById("main").oncontextmenu = changeColor;
+      // function changeColor() {
+      //   document.getElementById("main").style.backgroundColor = "purple";
+      // }
+
+      // // onemouseenter ==> mouse hover
+      // document.getElementById("main").onmouseenter = changeColor;
+      // function changeColor() {
+      //   document.getElementById("main").style.backgroundColor = "purple";
+      // }
+
+      // // onemouseenter ==> mouse hover
+      // document.getElementById("main").onmouseenter = changeColor;
+      // function changeColor() {
+      //   document.getElementById("main").style.backgroundColor = "purple";
+      // }
+
+      // // addEventListener(event,function)
+      // document
+      //   .getElementById("main")
+      //   .addEventListener("mouseenter", function () {
+      //     document.getElementById("main").style.backgroundColor = "purple";
+      //   });
+      // document.getElementById("nav").addEventListener("click", function () {
+      //   this.style.border = "10px solid orange";
+      // });
+
+      // // addEventListener(event,function)
+      // document.getElementById("main").addEventListener(
+      //   "click",
+      //   function () {
+      //     document.getElementById("main").style.backgroundColor = "purple";
+      //   },
+      //   false
+      // );
+      // document.getElementById("nav").addEventListener(
+      //   "click",
+      //   function () {
+      //     document.getElementById("nav").style.backgroundColor = "red";
+      //   },
+      //   false
+      // );
+
+      // // removeEventListener(event,function)
+      // document.getElementById("main").addEventListener("mouseout", xyz);
+      // document.getElementById("main").addEventListener("click", abc);
+      // function xyz() {
+      //   document.getElementById("main").style.backgroundColor = "purple";
+      // }
+      // function abc() {
+      //   document.getElementById("main").removeEventListener("mouseout", xyz);
+      // }
+      // //test demo
+
+      // let par = document.getElementById("main");
+      // par.addEventListener("mouseenter", parIn);
+      // function parIn() {
+      //   this.style.backgroundColor = "purple";
+      //   document.getElementById("nav").style.transform = "60px";
+      // }
+      // par.addEventListener("mouseout", parOut);
+      // function parOut() {
+      //   this.style.backgroundColor = "grey";
+      // }
+
+      // let child = document.getElementById("nav");
+      // child.addEventListener("mouseover", childIn);
+      // function childIn() {
+      //   this.style.backgroundColor = "red";
+      // }
+      // child.addEventListener("mouseleave", childOut);
+      // function childOut() {
+      //   this.style.backgroundColor = "grey";
+      // }
     </script>
   </body>
 </html>
